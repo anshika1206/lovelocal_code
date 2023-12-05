@@ -1,0 +1,15 @@
+Explaination of the code file.
+
+1. Start by declaring the required variables: n, length, and i. Here, n represents the length of the input string, length stores the length of the last word in the string, and i is a loop variable used for iterating through the string from the end.
+
+2. Next, we initialize i to n-1, where n is the length of the input string. This means we start our loop from the last character of the string.
+
+3. The loop continues until i is greater than or equal to 0. This ensures that we don't go beyond the start of the string while iterating backward.
+
+4. Inside the loop, we first check if the character at index i is a space (' '). If it is, we update the value of length to 0. This is because we are interested in counting the length of the last word, and we encounter a space, indicating the end of the previous word and the start of a new one.
+
+5. After this, we check if the value of length is greater than 0. If it is, we break out of the loop. This means that we have already counted the length of the last word, and there is no need to continue the loop.
+
+6. If the character at index i is not a space, we increment the value of length by 1. This is because we are still counting the characters of the last word.
+
+7. Finally, after the loop has completed its iteration, we return the value of length, which represents the length of the last word in the input string.

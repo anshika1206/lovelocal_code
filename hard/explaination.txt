@@ -1,0 +1,19 @@
+1. This algorithm finds the largest square with all '1's in a binary matrix. It uses a dynamic programming approach.
+
+2. The algorithm first checks if the input matrix is empty. If it is, the function returns 0 as there are no squares.
+
+3. The algorithm then initializes two variables: m and n, which store the number of rows and columns in the matrix, respectively. It also initializes a variable sz to 0, which will store the size of the largest square.
+
+4. The algorithm then creates a two-dimensional vector called dp of size m x n. Each element of this vector represents the size of the largest square whose bottom-right corner is the corresponding element in the matrix.
+
+5. The algorithm then iterates over each element in the matrix using two nested loops. Inside the loops, it first checks if the current element is the first row or column, or if the current element in the matrix is '0'. If any of these conditions are met, it directly assigns the value of the current element in the matrix to the corresponding element in the dp vector.
+
+6. If none of the above conditions are met, it means that the current element in the matrix is '1'. In this case, the algorithm calculates the size of the largest square whose bottom-right corner is the current element as the minimum of the sizes of the largest squares whose bottom-right corners are the diagonal, top, and left neighbors of the current element.
+
+7. After calculating the size of the largest square, the algorithm compares it with the current maximum size sz and updates sz if necessary.
+
+8. Finally, after iterating over all elements in the matrix, the algorithm returns the square of the maximum size sz as the largest square with all '1's in the binary matrix.
+
+9. The time complexity of this algorithm is O(m * n), where m and n are the number of rows and columns in the matrix, respectively. This is because in the worst case, the algorithm needs to iterate over every element in the matrix once.
+
+10. The space complexity is also O(m * n), as in the worst case, the maximum size of the dp vector can be m * n.

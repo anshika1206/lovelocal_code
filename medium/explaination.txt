@@ -1,0 +1,13 @@
+Explaination of the code file.
+
+1. The LCA function is a recursive function that takes three parameters: the root of a binary tree, and two integers representing the values of two nodes in the tree.
+
+2. Inside the function, we first check if the root is a null pointer. If it is, we return a null pointer. This is because we have reached the end of the tree, and there is no LCA.
+
+3. Next, we check if the value of the root node is less than both n1 and n2. This means that both n1 and n2 lie in the right subtree of the root. In this case, we recursively call the LCA function on the right child of the root.
+
+4. We then check if the value of the root node is greater than both n1 and n2. This means that both n1 and n2 lie in the left subtree of the root. In this case, we recursively call the LCA function on the left child of the root.
+
+5. If neither of the above conditions is met, it means that the root node is an ancestor of both n1 and n2. Therefore, we return the root node as the LCA.
+
+6. Finally, after the recursive calls have completed their execution, we return the result.
